@@ -1,0 +1,28 @@
+.header {
+    display: flex;
+    margin: 0 auto;
+    align-items: center;
+    color: black;
+    width: 100%;
+    justify-content: space-between;
+    background-color: white;
+    padding:  1rem;
+}
+.left {
+    display: flex;
+    gap: 8px;
+}
+
+.aboutMe {
+    display: flex;
+    align-items: center;
+    color: grey;
+    gap: 8px;
+}
+
+.middle {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}

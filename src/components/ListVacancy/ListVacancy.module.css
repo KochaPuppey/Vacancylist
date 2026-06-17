@@ -1,0 +1,106 @@
+.cardsContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    width: 100%;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    background: #ffffff;
+    border: 1px solid #ececec;
+    border-radius: 16px;
+    padding: 24px;
+    justify-content: start;
+}
+
+.card:hover {
+    border-color: #d9d9d9;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+}
+
+.title {
+    margin: 0 0 16px 0;
+    font-size: 20px;
+    font-weight: 600;
+    color: #3659d9;
+    cursor: pointer;
+    text-align: left;
+}
+
+.title:hover {
+    text-decoration: underline;
+}
+
+.info {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 12px;
+
+}
+
+.salary {
+    font-size: 18px;
+    font-weight: 600;
+    color: #222;
+}
+
+.experience {
+    font-size: 15px;
+    color: #8f8f8f;
+}
+
+.company {
+    font-size: 15px;
+    color: #8f8f8f;
+    margin-bottom: 8px;
+    text-align: left;
+}
+
+.city {
+    margin-bottom: 16px;
+    text-align: left;
+}
+
+.button {
+    padding: 10px 18px;
+    border: none;
+    border-radius: 8px;
+    background: #111;
+    color: #fff;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background 0.2s ease;
+    width: 10rem;;
+}
+
+.button:hover {
+    background: #222;
+}
+
+.space {
+    display: inline-block;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 10px;
+    font-weight: 600;
+    align-self: flex-start;
+    margin-bottom: 8px;
+}
+
+.office {
+    background: #ececec;
+    color: #7a7a7a;
+}
+
+.remote {
+    background: #4f6df5;
+    color: white;
+}
+
+.hybrid {
+    background: #111;
+    color: white;
+}
