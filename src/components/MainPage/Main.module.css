@@ -3,7 +3,7 @@
     margin: 0 auto;
     grid-template-columns: 0.7fr 2fr;
     color: black;
-    width: 85%;
+    width: 75%;
     gap:20px;
 }
 
@@ -17,5 +17,13 @@
     display: flex;
     gap: 20px;
     height: 42px;
+    margin: 21px 0 0 170px;
 }
+
+.pagination {
+    margin-bottom: 1rem;
+    margin-left: 200px;
+}
+
+
 

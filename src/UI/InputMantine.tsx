@@ -1,6 +1,5 @@
 import { TextInput } from '@mantine/core';
-import type {ChangeEvent, ReactNode} from "react";
-
+import type {ChangeEvent, ReactNode, KeyboardEvent} from "react";
 type InputMantineProps = {
     placeholder?: string;
     value?: string
@@ -9,10 +8,11 @@ type InputMantineProps = {
     w?: string | number;
     leftSection?: ReactNode;
     onChange?: (event: ChangeEvent<HTMLInputElement>) => void;
+    onKeyDown?: (event: KeyboardEvent<HTMLInputElement>) => void;
 }
 
 
-export default function InputMantine({placeholder,value, label,size = 'sm',w, onChange, leftSection}:InputMantineProps ) {
+export default function InputMantine({placeholder,value, label,size = 'sm',w, onChange, leftSection,  onKeyDown}:InputMantineProps ) {
   return (
     <TextInput
       placeholder={placeholder}
@@ -22,7 +22,7 @@ export default function InputMantine({placeholder,value, label,size = 'sm',w, on
       size={size}
       w={w}
       onChange={onChange}
-
+      onKeyDown = {onKeyDown}
     />
   );
 }

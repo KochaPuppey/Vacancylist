@@ -1,13 +1,13 @@
-import { StrictMode } from 'react'
+
 import { createRoot } from 'react-dom/client'
 import './index.css'
 import { createTheme, MantineProvider } from '@mantine/core';
 import App from './App.tsx';
 import {setupStore} from './store/store';
 import {Provider} from 'react-redux';
+import {BrowserRouter} from 'react-router';
 import '@mantine/core/styles.css';
 const store = setupStore();
-
 const theme = createTheme({
     primaryColor: 'primary',
     primaryShade: 7,
@@ -28,11 +28,11 @@ const theme = createTheme({
 });
 
 createRoot(document.getElementById('root')!).render(
-  <StrictMode>
+      <BrowserRouter>
       <Provider store = {store}>
       <MantineProvider theme={theme}>
     <App />
       </MantineProvider>
       </Provider>
-  </StrictMode>,
+      </BrowserRouter>
 )

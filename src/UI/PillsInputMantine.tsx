@@ -10,8 +10,8 @@ export default function PillsInputMantine() {
     );
 
     return (
-        <PillsInput w="200" mt="12">
-            <Pill.Group>
+        <PillsInput w="200" mt="12" styles={{input: {border:'none'} }} >
+            <Pill.Group >
                 {selectSkills.map((skill) => (
                     <Pill
                         key={skill}

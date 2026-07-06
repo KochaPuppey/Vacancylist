@@ -1,5 +1,5 @@
 export type VacancyFilters = {
-    search?: string;
-    city?: string;
-    skills?: string[];
+    searchQuery?: string;
+    cityQuery?: string;
+    selectSkills?: string[];
 }

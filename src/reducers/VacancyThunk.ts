@@ -9,23 +9,22 @@ export const fetchVacancy = createAsyncThunk<
 >(
     'listVacancy/fetchVacancy',
     async (filters, { rejectWithValue }) => {
+        const params = new URLSearchParams()
+        console.log(filters)
         try {
-            const params = new URLSearchParams();
-
-            if (filters.search) {
-                params.append('search', filters.search);
+            if (filters.searchQuery) {
+                params.set ('search', filters.searchQuery);
             }
 
-            if (filters.city && filters.city !== 'Все города') {
-                params.append('city', filters.city);
+            if (filters.cityQuery && filters.cityQuery !== 'Все города') {
+                params.set ('city', filters.cityQuery);
             }
 
-            if (filters.skills?.length) {
-                params.append('skills', filters.skills.join(','));
+            if (filters.selectSkills?.length) {
+                params.set ('skills', filters.selectSkills.join(','));
             }
-
             const response = await fetch(
-                `https://kata-jobs.onrender.com/api/jobs?${params.toString()}`
+                `https://kata-jobs.onrender.com/api/jobs?${params.toString()}&limit=10`
             );
 
             if (!response.ok) {
@@ -33,7 +32,6 @@ export const fetchVacancy = createAsyncThunk<
             }
 
             const data = await response.json();
-            console.log('Пришло с сервера' + data.jobs)
             return data.jobs;
         } catch (error) {
             if (error instanceof Error) {

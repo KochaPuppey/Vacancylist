@@ -1,12 +1,16 @@
 import './App.css'
-import Header from './components/Header/Header.tsx';
-import Main from './components/Main/Main.tsx'
+import MainLayout from "./MainLayout/MainLayout.tsx";
+import MainPage from './components/MainPage/MainPage.tsx'
+import {Route,Routes} from 'react-router';
+import VacancyWithDescriptionPage from "./components/VacancyWithDescriptionPage/VacancyWithDescriptionPage.tsx";
 function App() {
     return (
-        <>
-            <Header />
-            <Main />
-        </>
+        <Routes>
+            <Route element={<MainLayout/>}>
+                <Route path= '/' element= {<MainPage />} />
+                <Route path='/vacancy/:id' element={<VacancyWithDescriptionPage/>}/>
+            </Route>
+        </Routes>
     )
 }
 

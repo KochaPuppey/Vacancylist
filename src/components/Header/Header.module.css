@@ -26,3 +26,19 @@
     justify-content: center;
     gap: 20px;
 }
+
+.vacancy {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+}
+
+.dot {
+    margin-top: 8px;
+    display: flex;
+    width: 8px;
+    height: 8px;
+    background-color: #3b82f6;
+    border-radius: 50%;
+    align-items: end;
+}

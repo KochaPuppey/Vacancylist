@@ -18,6 +18,7 @@
     background-color: white;
     padding: 24px;
     border-radius: 10px;
+    width: 360px;
 }
 .addSkills {
     display: flex;
@@ -31,4 +32,5 @@
     background-color: white;
     color: grey;
     border-radius: 10px;
+    width: 360px;
 }

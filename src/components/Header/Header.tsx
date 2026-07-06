@@ -9,7 +9,10 @@ export default function Header () {
         <p>.FrontEnd</p>
       </div>
       <div className={styles.middle}>
+          <div className={styles.vacancy}>
         <span>Вакансии FE</span>
+          <span className={styles.dot}></span>
+          </div>
         <span className={styles.aboutMe}> <UserCircleIcon size={22} />Обо мне</span>
       </div>
     </header>

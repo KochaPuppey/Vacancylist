@@ -49,6 +49,10 @@ export const VacancySlice = createSlice({
             );
         },
 
+        setSkills: (state, action: PayloadAction<string[]>) => {
+            state.selectSkills = action.payload;
+        }
+
     },
 
     extraReducers: (builder) => {
@@ -75,6 +79,7 @@ export const {
     setCity,
     addSkill,
     removeSkill,
+    setSkills,
 } = VacancySlice.actions;
 
 export default VacancySlice.reducer;

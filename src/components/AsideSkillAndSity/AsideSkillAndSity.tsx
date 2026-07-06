@@ -4,7 +4,7 @@ import ButtonMantine from '../../UI/ButtonMantine';
 import SelectMantine from '../../UI/SelectMantine';
 import PillsInputMantine from '../../UI/PillsInputMantine';
 import { IconPlus } from '@tabler/icons-react';
-import {type ChangeEvent, useState} from 'react';
+import {type ChangeEvent, useState, type KeyboardEvent} from 'react';
 import {useTypedDispatch} from '../../hooks/redux.ts';
 import  {addSkill} from "../../reducers/VacancySlice.ts";
 
@@ -24,6 +24,12 @@ export default function AsideSkillAndSity() {
     dispatch(addSkill(skill));
     setValue('');
   }
+
+  const handleKeyDown = (event: KeyboardEvent<HTMLInputElement>) => {
+    if (event.key === 'Enter') {
+      handleClick();
+    }
+  };
   return (
     <aside className={styles.aside}>
       <div className={styles.listSkills}>
@@ -34,6 +40,7 @@ export default function AsideSkillAndSity() {
             onChange={handleChange}
             value = {value}
             w={'200'}
+            onKeyDown={handleKeyDown}
           />
           <ButtonMantine onClick={handleClick} color={'primary.3'} w={'34'} h={'30'} p={'0'}>
             <IconPlus size={28}/>
