@@ -8,7 +8,7 @@ function App() {
         <Routes>
             <Route element={<MainLayout/>}>
                 <Route path= '/' element= {<MainPage />} />
-                <Route path='/vacancy/:id' element={<VacancyWithDescriptionPage/>}/>
+                <Route path='/vacancylist/:id' element={<VacancyWithDescriptionPage/>}/>
             </Route>
         </Routes>
     )
